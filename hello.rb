@@ -1,2 +1,6 @@
 
-print "hello world"
+#print "hello world"
+
+
+msg = "hello ruby"
+puts msg
