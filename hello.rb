@@ -4,3 +4,7 @@
 
 msg = "hello ruby"
 puts msg
+
+
+msg = "hello ruby again"
+puts msg
