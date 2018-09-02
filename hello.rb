@@ -6,7 +6,7 @@ puts 10 * 3
 
 
 print "helo world"
-puts "hello world"　#改行される
+puts "hello world" #改行される
 p "hello world" #デバッグ用　
 
 
@@ -18,3 +18,26 @@ msg = "hello ruby again"
 puts msg
 
 #定数　英大文字で始めないといけない
+
+
+#4 オブジェクト
+# .length 文字数を教えてくれる
+# .reverse　逆順の文字列にしてくれる
+
+#5 数値
+p 4.8.class
+p 4.8.methods
+
+#** べき乗の表現
+p 10 + 3
+p 10 * 3
+p 2.4 * 2
+p 10 / 3
+p 10 % 3 #余りを算出する
+p 10.0 / 3
+p Rational(2, 5) + Rational(3, 4)
+p 2/5r + 3/4r #同じ表現　簡略化したもの
+
+p 52.6 .round #四捨五入
+p 52.6 .floor #切り上げ
+p 52.6 .ceil #切り捨て
