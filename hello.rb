@@ -41,3 +41,18 @@ p 2/5r + 3/4r #同じ表現　簡略化したもの
 p 52.6 .round #四捨五入
 p 52.6 .floor #切り上げ
 p 52.6 .ceil #切り捨て
+
+#6 文字列
+#""式展開が可能 \n 改行　\t tab
+#''そのまま表示される
+puts "hell\no worl\td"
+puts 'hell\no worl\td'
+
+puts "price #{3000 * 4}"
+puts 'price #{3000 * 4}'
+
+name = "takuto"
+puts "hello #{name}"
+
+puts "hello" + "world"
+puts "hello" * 5
