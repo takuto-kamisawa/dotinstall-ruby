@@ -56,3 +56,98 @@ puts "hello #{name}"
 
 puts "hello" + "world"
 puts "hello" * 5
+
+#7 ?!
+#upcase 大文字で表示する
+#upcase! それ以降大文字に変えてしまう
+puts name.upcase
+puts name
+puts name.upcase!
+puts name
+
+#? 真偽値 t or f
+p name.empty?
+p name. include?("K")
+
+#8 配列
+colors = ["red","blue","white"]
+p colors[0] #カッコ内を添字という　先頭から0,1,2
+p colors[-1] #マイナスは末尾からカウント -1,-2,-3
+p colors[0..2] #0から2まで
+p colors[0...2] #0から2の直前まで
+p colors[3] #nil 何もないという意味
+
+colors[0] = "blue"
+colors[1,2] = "red","pink"
+colors.push("gold")
+colors << "silver" #pushと同じ 簡略化したもの
+p colors
+
+p colors.size
+p colors.sort
+
+#9 ハッシュ keyとvalueをペアにする
+scores = {takuto: 300, mai: 450}
+p scores[:takuto]
+scores[:takuto] = 400
+p scores[:takuto]
+
+p scores.size
+p scores.keys
+p scores.values
+p scores.has_key?(:takuto)
+
+#10 変換
+x = 50
+y = "3"
+p x + y.to_i #to_i オブジェクトを数値にする
+p x + y.to_f #to_f 浮動小数点数
+p x.to_s + y #to_s 文字列にする
+
+scores = {takuto: 300, mai:500}
+
+p scores.to_a.to_h
+
+#11 %記法
+puts "he\"ll\"o"
+puts 'he\'ll\'o'
+
+puts %(he"ll"o)
+puts %q(he'll'o)
+
+
+p ["red", "blue"]
+p ['red', 'blue']
+
+p %W(red blue)
+p %w(red blue)
+
+#12 書式付きで値を埋め込む
+# "文字列"　% 値
+# %s 文字列
+# %d 整数
+# %f 浮動小数点数
+
+p "name: %s" % "takuto"
+p "name: %10s" % "takuto" #10桁分スペースを取る
+p "name: %-10s" % "takuto" #10桁分スペースを取り左寄せ
+
+p "id: %05d, rate: %f" % [355, 3.141] #id 5桁表示 5桁に満たないときは0で埋める
+printf("name: %s\n", "takuto") #\n 改行
+printf("id: %05d, rate: %f\n", 355, 3.141)
+p sprintf("id: %05d, rate: %f\n", 355, 3.141)
+
+# printf 文字列を表示する
+# sprintf 文字列を返す
+
+#13 if文
+score = gets.to_i
+
+if score > 80
+  p "よくできました"
+elsif score > 60
+  p "頑張りました"
+else
+  p "頑張りましょう"
+end
+# == イコール != ノットイコール　$$ and　|| or
