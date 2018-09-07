@@ -87,40 +87,40 @@ p colors.size
 p colors.sort
 
 #9 ハッシュ keyとvalueをペアにする
-scores = {takuto: 300, mai: 450}
-p scores[:takuto]
-scores[:takuto] = 400
-p scores[:takuto]
+#scores = {takuto: 300, mai: 450}
+#p scores[:takuto]
+#scores[:takuto] = 400
+#p scores[:takuto]
 
-p scores.size
-p scores.keys
-p scores.values
-p scores.has_key?(:takuto)
+#p scores.size
+#p scores.keys
+#p scores.values
+#p scores.has_key?(:takuto)
 
 #10 変換
-x = 50
-y = "3"
-p x + y.to_i #to_i オブジェクトを数値にする
-p x + y.to_f #to_f 浮動小数点数
-p x.to_s + y #to_s 文字列にする
+#x = 50
+#y = "3"
+#p x + y.to_i #to_i オブジェクトを数値にする
+#p x + y.to_f #to_f 浮動小数点数
+#p x.to_s + y #to_s 文字列にする
 
-scores = {takuto: 300, mai:500}
+#scores = {takuto: 300, mai:500}
 
-p scores.to_a.to_h
+#p scores.to_a.to_h
 
 #11 %記法
-puts "he\"ll\"o"
-puts 'he\'ll\'o'
+#puts "he\"ll\"o"
+#puts 'he\'ll\'o'
 
-puts %(he"ll"o)
-puts %q(he'll'o)
+#puts %(he"ll"o)
+#puts %q(he'll'o)
 
 
-p ["red", "blue"]
-p ['red', 'blue']
+#p ["red", "blue"]
+#p ['red', 'blue']
 
-p %W(red blue)
-p %w(red blue)
+#p %W(red blue)
+#p %w(red blue)
 
 #12 書式付きで値を埋め込む
 # "文字列"　% 値
@@ -128,14 +128,14 @@ p %w(red blue)
 # %d 整数
 # %f 浮動小数点数
 
-p "name: %s" % "takuto"
-p "name: %10s" % "takuto" #10桁分スペースを取る
-p "name: %-10s" % "takuto" #10桁分スペースを取り左寄せ
+#p "name: %s" % "takuto"
+#p "name: %10s" % "takuto" #10桁分スペースを取る
+#p "name: %-10s" % "takuto" #10桁分スペースを取り左寄せ
 
-p "id: %05d, rate: %f" % [355, 3.141] #id 5桁表示 5桁に満たないときは0で埋める
-printf("name: %s\n", "takuto") #\n 改行
-printf("id: %05d, rate: %f\n", 355, 3.141)
-p sprintf("id: %05d, rate: %f\n", 355, 3.141)
+#p "id: %05d, rate: %f" % [355, 3.141] #id 5桁表示 5桁に満たないときは0で埋める
+#printf("name: %s\n", "takuto") #\n 改行
+#printf("id: %05d, rate: %f\n", 355, 3.141)
+#p sprintf("id: %05d, rate: %f\n", 355, 3.141)
 
 # printf 文字列を表示する
 # sprintf 文字列を返す
@@ -176,5 +176,48 @@ p sprintf("id: %05d, rate: %f\n", 355, 3.141)
 #  puts "#{i}: hello"
 #end
 
-10.times { |i| puts "#{i}: hello"
-}
+#10.times { |i| puts "#{i}: hello"
+#}
+
+#16 for each
+
+#for i in 15..20 do
+#  p i
+#end
+
+#for color in ["red", "blue"] do
+#  p color
+#end
+
+#for name, score in {takuto:300, mai:500} do
+#  puts "#{name}: #{score}"
+#end
+
+#each
+(15..20).each do |i|
+  p i
+end
+
+["red", "blue"].each do |color|
+  p color
+end
+
+{takuto:300, mai:500}.each do |name, score|
+  puts "#{name}: #{score}"
+end
+
+
+#17 loop break next
+#i = 0
+#loop do
+#  p i
+#  i += 1
+#end
+
+10.times do |i|
+if i == 7 then
+    #break
+    next
+  end
+  p i
+end
