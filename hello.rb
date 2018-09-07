@@ -141,13 +141,40 @@ p sprintf("id: %05d, rate: %f\n", 355, 3.141)
 # sprintf 文字列を返す
 
 #13 if文
-score = gets.to_i
+#score = gets.to_i
 
-if score > 80
-  p "よくできました"
-elsif score > 60
-  p "頑張りました"
-else
-  p "頑張りましょう"
-end
+#if score > 80
+#  p "よくできました"
+#elsif score > 60
+#  p "頑張りました"
+#else
+#  p "頑張りましょう"
+#end
 # == イコール != ノットイコール　$$ and　|| or
+
+#14 case
+#signal = gets.chomp
+#case signal
+#when "red"
+#  p "止まれ"
+#when "green", "blue"
+#  p "進め"
+#when "yellow"
+#  p "注意"
+#else "wrong signal"
+#end
+
+#15 while times
+#i = 0
+#while i < 10 do
+#  puts "#{i}: hello"
+#  i += 1
+#end
+
+#times
+#10.times do |i|
+#  puts "#{i}: hello"
+#end
+
+10.times { |i| puts "#{i}: hello"
+}
